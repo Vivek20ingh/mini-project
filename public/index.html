@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+          
+          <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>Todo List</h1>
+
+        <div class="content">
+
+          <form id="add-Event-form">
+              <input type="text" name="Todo" placeholder="Todo" id="input1">
+              <input type="time" name="Start_Time" placeholder="Start_Time" id="input2">
+              <input type="time" name="End_Time" placeholder="End_Time" id="input2">
+              <button>Add Event</button>
+          </form>
+
+          <ul id="Event-list"></ul>
+
+      </div>
+
+
+
+
+
+
+
+<script>
+// Initialize Firebase
+var firebaseConfig = {
+    apiKey: "AIzaSyCeHwWwcvpjkBorp3x9q5G2lqazQeN2K-A",
+    authDomain: "mini-project-a8ec2.firebaseapp.com",
+    projectId: "mini-project-a8ec2",
+    storageBucket: "mini-project-a8ec2.appspot.com",
+    messagingSenderId: "337603103450",
+    appId: "1:337603103450:web:29f714f888ada5e75033e3",
+    measurementId: "G-43P5340SRE"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+    const db = firebase.firestore();
+    db.settings( {timestampsInSnapshots: true});
+</script>
+
+
+        <script src="app.js"></script>
+    </body>
+</html>
